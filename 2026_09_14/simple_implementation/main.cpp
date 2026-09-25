@@ -1,6 +1,7 @@
 #include <iostream>
 
 void my_sort(int *arr, const int size);
+void print_array(const char *const comment, int *arr, const int size);
 
 // TODO Интерфейс пользователя должен быть на русском языке
 int main()
@@ -18,20 +19,14 @@ int main()
 		std::cin >> *(arr + i);
 	}
 
-	std::cout << "Неотсортированный массив: " << std::endl;
-	for (int i = 0; i < size; i++)
-	{
-		std::cout << *(arr + i) << " ";
-	}
-	std::cout << std::endl;
+	print_array("Неотсортированный массив: ", arr, size);
 
 	my_sort(arr, size);
 
-	std::cout << "Отсортированный массив: " << std::endl;
-	for (int i = 0; i < size; i++)
-	{
-		std::cout << *(arr + i) << " ";
-	}
+	print_array("Отсортированный массив: ", arr, size);
+
+	return 0;
+
 	std::cout << std::endl;
 	return 0;
 }
@@ -51,4 +46,14 @@ void my_sort(int *arr, const int size)
 			}
 		}
 	}
+}
+
+void print_array(const char *const comment, int *arr, const int size)
+{
+	std::cout << comment << std::endl;
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << *(arr + i) << " ";
+	}
+	std::cout << std::endl;
 }
