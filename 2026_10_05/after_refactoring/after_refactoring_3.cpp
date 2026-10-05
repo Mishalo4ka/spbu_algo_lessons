@@ -11,9 +11,8 @@ int main() {
         a[i] = std::rand() % 20;
     }
     print_array(a, size);
-    ˝
 
-        for (int i = 0; i < size / 2; i++) {
+    for (int i = 0; i < size / 2; i++) {
         int temp = a[i];
         a[i] = a[size - 1 - i];
         a[size - 1 - i] = temp;

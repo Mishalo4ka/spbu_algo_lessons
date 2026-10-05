@@ -1,4 +1,4 @@
-MAIN=after_refactoring_5.cpp
+MAIN=after_refactoring/after_refactoring_3.cpp
 APP=example
 
 if [ ! -f $APP ]; then rm $APP
