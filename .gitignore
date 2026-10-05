@@ -70,3 +70,5 @@ Testing/
 
 .vscode/
 example
+.clang-format
+.DS_Store
