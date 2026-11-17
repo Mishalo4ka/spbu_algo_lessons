@@ -43,6 +43,7 @@
 build/
 Build/
 build-*/
+build_*/
 
 # CMake generated files
 CMakeFiles/
@@ -70,7 +71,7 @@ Testing/
 
 .vscode/
 example
+main
 .clang-format
 .DS_Store
-
-main
+lib/

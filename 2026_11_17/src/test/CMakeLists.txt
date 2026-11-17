@@ -1,0 +1,29 @@
+add_executable(test_bubble_sort_classic test_bubble_sort_classic.cpp)
+target_link_libraries(test_bubble_sort_classic PRIVATE gtest sort)
+
+add_executable(test_bubble_sort_no_swaped_opt test_bubble_sort_no_swaped_opt.cpp)
+target_link_libraries(test_bubble_sort_no_swaped_opt PRIVATE gtest sort)
+
+add_executable(test_bubble_sort_no_swaped_opt_mod test_bubble_sort_no_swaped_opt_mod.cpp)
+target_link_libraries(test_bubble_sort_no_swaped_opt_mod PRIVATE gtest sort)
+
+add_executable(test_shaker_sort test_shaker_sort.cpp)
+target_link_libraries(test_shaker_sort PRIVATE gtest sort)
+
+add_executable(test_shaker_sort_mod test_shaker_sort_mod.cpp)
+target_link_libraries(test_shaker_sort_mod PRIVATE gtest sort)
+
+add_executable(test_odd_even_sort test_odd_even_sort.cpp)
+target_link_libraries(test_odd_even_sort PRIVATE gtest sort)
+
+add_executable(test_comb_sort test_comb_sort.cpp)
+target_link_libraries(test_comb_sort PRIVATE gtest sort)
+
+
+add_test(test_bubble_sort_classic test_bubble_sort_classic)
+add_test(test_bubble_sort_no_swaped_opt test_bubble_sort_no_swaped_opt)
+add_test(test_bubble_sort_no_swaped_opt_mod test_bubble_sort_no_swaped_opt_mod)
+add_test(test_shaker_sort test_shaker_sort)
+add_test(test_shaker_sort_mod test_shaker_sort_mod)
+add_test(test_odd_even_sort test_odd_even_sort)
+add_test(test_comb_sort test_comb_sort)
