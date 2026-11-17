@@ -184,3 +184,21 @@ void biv::comb_sort(int *arr, const int size) {
         }
     }
 }
+
+void biv::selection_sort(int *arr, const int size) {
+    for (int i = 0; i < size - 1; i++) {
+        int min = i;
+
+        for (int j = i + 1; j < size; j++) {
+            if (arr[min] > arr[j]) {
+                min = j;
+            }
+        }
+
+        if (min != i) {
+            int t = arr[i];
+            arr[i] = arr[min];
+            arr[min] = t;
+        }
+    }
+}
