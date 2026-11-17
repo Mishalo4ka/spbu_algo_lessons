@@ -176,6 +176,7 @@ void biv::comb_sort(int *arr, const int size) {
 
         if (step > 1) {
             step /= factor;
+            is_swapped = true;
         }
     }
 }
