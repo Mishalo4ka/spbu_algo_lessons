@@ -13,4 +13,7 @@ void odd_even_sort(int *arr, const int size);
 void comb_sort(int *arr, const int size);
 
 void selection_sort(int *arr, const int size);
+
+void insert_sort(int *arr, const int size);
+void insert_sort_binary_search(int *arr, const int size);
 } // namespace biv

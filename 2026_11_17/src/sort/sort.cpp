@@ -202,3 +202,42 @@ void biv::selection_sort(int *arr, const int size) {
         }
     }
 }
+
+void biv::insert_sort(int *arr, const int size) {
+    for (int i = 1; i < size; i++) {
+        int j = i;
+        int x = arr[j];
+
+        while (j > 0 && x < arr[j - 1]) {
+            arr[j] = arr[j - 1];
+            j--;
+        }
+        arr[j] = x;
+    }
+}
+
+void biv::insert_sort_binary_search(int *arr, const int size) {
+    for (int i = 1; i < size; i++) {
+        int x = arr[i];
+
+        int begin = 0;
+        int end = i - 1;
+
+        while (begin < end) {
+            int middle = (begin + end) / 2;
+
+            if (arr[middle] > x) {
+                end = middle;
+            } else {
+                begin = middle + 1;
+            }
+        }
+
+        if (x < arr[begin]) {
+            for (int j = i; j > begin; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[begin] = x;
+        }
+    }
+}
