@@ -241,3 +241,19 @@ void biv::insert_sort_binary_search(int *arr, const int size) {
         }
     }
 }
+
+void biv::shell_sort(int *arr, const int size) {
+    int step = size / 2;
+    while (step > 0) {
+        for (int i = step; i < size; i++) {
+            int j = i;
+            int x = arr[j];
+            while (j >= step && x < arr[j - step]) {
+                arr[j] = arr[j - step];
+                j -= step;
+            }
+            arr[j] = x;
+        }
+        step /= 2;
+    }
+}

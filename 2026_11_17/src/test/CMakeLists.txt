@@ -28,6 +28,8 @@ target_link_libraries(test_insert_sort PRIVATE gtest sort)
 add_executable(test_insert_sort_binary_search test_insert_sort_binary_search.cpp)
 target_link_libraries(test_insert_sort_binary_search PRIVATE gtest sort)
 
+add_executable(test_shell_sort test_shell_sort.cpp)
+target_link_libraries(test_shell_sort PRIVATE gtest sort)
 
 add_test(test_bubble_sort_classic test_bubble_sort_classic)
 add_test(test_bubble_sort_no_swaped_opt test_bubble_sort_no_swaped_opt)
@@ -39,3 +41,4 @@ add_test(test_comb_sort test_comb_sort)
 add_test(test_selection_sort test_selection_sort)
 add_test(test_insert_sort test_insert_sort)
 add_test(test_insert_sort_binary_search test_insert_sort_binary_search)
+add_test(test_shell_sort test_shell_sort)
