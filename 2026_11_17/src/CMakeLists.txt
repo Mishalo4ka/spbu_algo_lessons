@@ -13,4 +13,5 @@ set(BUILD_GMOCK OFF)
 add_subdirectory(../lib/googletest lib/googletest)
 
 add_subdirectory(sort)
+add_subdirectory(timer)
 add_subdirectory(test)
